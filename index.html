@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>职业画像 · 动态叙事</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://unpkg.com/gsap@3/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/gsap@3/dist/Draggable.min.js"
+      defer
+    ></script>
+    <script type="module" src="src/main.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero" id="top">
+        <div class="hero__bg"></div>
+        <div class="hero__geometry hero__geometry--left"></div>
+        <div class="hero__geometry hero__geometry--right"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">动态叙事 · 职业全景</p>
+          <h1 class="hero__name">李晨曦</h1>
+          <div class="hero__tags" aria-live="polite"></div>
+          <p class="hero__slogan">以体验驱动技术，以技术放大体验</p>
+          <div class="hero__meta">
+            <span>资深前端工程师</span>
+            <span>交互设计爱好者</span>
+            <span>技术博主</span>
+          </div>
+        </div>
+        <div class="hero__scroll">
+          <span>Scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section overview" id="overview">
+          <div class="section__header">
+            <h2>个人概览</h2>
+            <p>精准定位 · 信息透明 · 结构清晰</p>
+          </div>
+          <div class="overview__layout">
+            <div class="overview__profile">
+              <div class="overview__avatar-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=facearea&w=400&h=400&q=80"
+                  alt="李晨曦头像"
+                  class="overview__avatar"
+                />
+                <div class="overview__avatar-ring"></div>
+              </div>
+              <div class="overview__quote">
+                “让数据驱动设计，让设计服务业务。”
+              </div>
+            </div>
+            <div class="overview__grid">
+              <article class="info-card info-card--basic">
+                <header>
+                  <div class="info-card__icon" aria-hidden="true">◎</div>
+                  <div>
+                    <h3>基础信息</h3>
+                    <p>Basic Info</p>
+                  </div>
+                </header>
+                <ul class="info-card__list">
+                  <li><span>姓名</span><strong>李晨曦</strong></li>
+                  <li><span>年龄</span><strong>29</strong></li>
+                  <li><span>所在城市</span><strong>上海 · 浦东</strong></li>
+                  <li>
+                    <span>联系方式</span
+                    ><a href="tel:+8613666668888">+86 136-6666-8888</a>
+                  </li>
+                  <li>
+                    <span>邮箱</span
+                    ><a href="mailto:lchenxi@icloud.com"
+                      >lchenxi@icloud.com</a
+                    >
+                  </li>
+                </ul>
+              </article>
+              <article class="info-card info-card--role">
+                <header>
+                  <div class="info-card__icon" aria-hidden="true">◎</div>
+                  <div>
+                    <h3>职业定位</h3>
+                    <p>Role Positioning</p>
+                  </div>
+                </header>
+                <div class="role-tags">
+                  <button class="role-tag" data-desc="主导前端架构演进，构建跨端设计系统。">
+                    前端架构师
+                  </button>
+                  <button class="role-tag" data-desc="打造符合商业目标的感性交互体验。">
+                    交互体验优化
+                  </button>
+                  <button class="role-tag" data-desc="跨端技术与性能治理实践者。">
+                    跨端开发
+                  </button>
+                  <div class="role-tag__desc" aria-live="polite"></div>
+                </div>
+              </article>
+              <article class="info-card info-card--skills">
+                <header>
+                  <div class="info-card__icon" aria-hidden="true">◎</div>
+                  <div>
+                    <h3>技术栈概览</h3>
+                    <p>Skill Overview</p>
+                  </div>
+                </header>
+                <div class="skill-lines">
+                  <div class="skill-line" data-level="100">
+                    <span>核心技能</span>
+                    <div class="skill-line__bar"><span></span></div>
+                  </div>
+                  <div class="skill-line" data-level="80">
+                    <span>熟练技能</span>
+                    <div class="skill-line__bar"><span></span></div>
+                  </div>
+                  <div class="skill-line" data-level="60">
+                    <span>了解技能</span>
+                    <div class="skill-line__bar"><span></span></div>
+                  </div>
+                </div>
+              </article>
+              <article class="info-card info-card--traits">
+                <header>
+                  <div class="info-card__icon" aria-hidden="true">◎</div>
+                  <div>
+                    <h3>个人特质</h3>
+                    <p>Personal Traits</p>
+                  </div>
+                </header>
+                <ul class="trait-list">
+                  <li>
+                    <span>高效沟通</span>
+                    <small>跨团队信息同步保持零延迟</small>
+                  </li>
+                  <li>
+                    <span>细节控</span>
+                    <small>像素级追踪体验波动</small>
+                  </li>
+                  <li>
+                    <span>快速学习</span>
+                    <small>新技术落地周期 ≤ 2 周</small>
+                  </li>
+                  <li>
+                    <span>数据驱动</span>
+                    <small>以指标验证每次决策</small>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section timeline" id="timeline">
+          <div class="section__header">
+            <h2>教育与工作轨迹</h2>
+            <div class="tabs" role="tablist">
+              <button class="tab is-active" data-target="work" role="tab">
+                工作经历
+              </button>
+              <button class="tab" data-target="education" role="tab">
+                教育背景
+              </button>
+            </div>
+          </div>
+          <div class="timeline__content">
+            <div class="timeline__line"></div>
+            <div class="timeline__list" id="timelineList"></div>
+          </div>
+        </section>
+
+        <section class="section skills" id="skills">
+          <div class="section__header">
+            <h2>技能矩阵 & 荣誉</h2>
+            <p>核心竞争力可视化呈现</p>
+          </div>
+          <div class="skills__layout">
+            <div class="skills__rings">
+              <div class="ring" data-value="92">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" class="ring__bg" />
+                  <circle cx="60" cy="60" r="52" class="ring__progress" />
+                </svg>
+                <div class="ring__label">
+                  <strong>React</strong>
+                  <span>92%</span>
+                </div>
+              </div>
+              <div class="ring" data-value="88">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" class="ring__bg" />
+                  <circle cx="60" cy="60" r="52" class="ring__progress" />
+                </svg>
+                <div class="ring__label">
+                  <strong>Vue</strong>
+                  <span>88%</span>
+                </div>
+              </div>
+              <div class="ring" data-value="95">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" class="ring__bg" />
+                  <circle cx="60" cy="60" r="52" class="ring__progress" />
+                </svg>
+                <div class="ring__label">
+                  <strong>GSAP</strong>
+                  <span>95%</span>
+                </div>
+              </div>
+              <div class="ring" data-value="86">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" class="ring__bg" />
+                  <circle cx="60" cy="60" r="52" class="ring__progress" />
+                </svg>
+                <div class="ring__label">
+                  <strong>性能优化</strong>
+                  <span>86%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skills__honors">
+              <article class="honor-card">
+                <div class="honor-card__icon">✦</div>
+                <div>
+                  <h3>Google Web Vitals 优化挑战赛 · Top 10</h3>
+                  <p>2024 · Google Developers</p>
+                  <span>针对复杂交互场景完成 38% LCP 优化</span>
+                </div>
+              </article>
+              <article class="honor-card">
+                <div class="honor-card__icon">✦</div>
+                <div>
+                  <h3>Apple SwiftUI Lab 邀请营</h3>
+                  <p>2023 · Apple Developer Program</p>
+                  <span>以跨端体验一致性方案获得嘉奖</span>
+                </div>
+              </article>
+              <article class="honor-card">
+                <div class="honor-card__icon">✦</div>
+                <div>
+                  <h3>UED 峰会年度创新实践</h3>
+                  <p>2022 · IXDC</p>
+                  <span>动态叙事简历方案入选荣誉案例</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section projects" id="projects">
+          <div class="section__header">
+            <h2>项目作品集</h2>
+            <div class="tabs" role="tablist">
+              <button class="tab is-active" data-category="personal">
+                个人项目
+              </button>
+              <button class="tab" data-category="work">工作项目</button>
+              <button class="tab" data-category="oss">开源贡献</button>
+              <button class="tab" data-category="design">设计作品</button>
+            </div>
+          </div>
+          <div class="project__grid" id="projectGrid"></div>
+        </section>
+
+        <section class="section traits" id="traits">
+          <div class="section__header">
+            <h2>个人特质 & 推荐语</h2>
+            <p>软实力可视化与第三方背书</p>
+          </div>
+          <div class="traits__layout">
+            <div class="radar">
+              <svg viewBox="0 0 300 300" class="radar__chart">
+                <polygon class="radar__grid" points=""></polygon>
+                <polygon class="radar__shape" points=""></polygon>
+              </svg>
+              <ul class="radar__labels"></ul>
+            </div>
+            <div class="testimonials">
+              <div class="testimonial" aria-live="polite">
+                <p class="testimonial__text"></p>
+                <div class="testimonial__author"></div>
+              </div>
+              <div class="testimonial__dots"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contact" id="contact">
+          <div class="section__header">
+            <h2>联系与附加信息</h2>
+            <p>保持通道畅通 · 提供快速反馈</p>
+          </div>
+          <div class="contact__layout">
+            <div class="contact__info">
+              <ul>
+                <li>
+                  <span>电话</span>
+                  <a href="tel:+8613666668888">+86 136-6666-8888</a>
+                </li>
+                <li>
+                  <span>邮箱</span>
+                  <a href="mailto:lchenxi@icloud.com">lchenxi@icloud.com</a>
+                </li>
+                <li>
+                  <span>LinkedIn</span>
+                  <a href="#">linkedin.com/in/chenxi-li</a>
+                </li>
+                <li>
+                  <span>GitHub</span>
+                  <a href="#">github.com/chenxi-lab</a>
+                </li>
+                <li>
+                  <span>博客</span>
+                  <a href="#">blog.chenxi.dev</a>
+                </li>
+                <li class="wechat">
+                  <span>微信</span>
+                  <div class="wechat__qr">
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=wechat-lcx"
+                      alt="微信二维码"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <div class="contact__extra">
+                <div>
+                  <h3>语言能力</h3>
+                  <p>英语 CET-6 · 听说读写流利</p>
+                </div>
+                <div>
+                  <h3>兴趣爱好</h3>
+                  <p>城市速写 · 慢跑 · 建筑摄影 · 声音设计</p>
+                </div>
+                <div>
+                  <h3>自我评价</h3>
+                  <p>
+                    兼具工程深度与体验敏感度的前端负责人，擅长用系统化方法解决跨团队复杂问题。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <form class="contact__form">
+              <label>
+                姓名
+                <input type="text" name="name" placeholder="请输入姓名" required />
+              </label>
+              <label>
+                邮箱
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </label>
+              <label>
+                主题
+                <input type="text" name="subject" placeholder="合作主题" />
+              </label>
+              <label>
+                留言
+                <textarea name="message" rows="4" placeholder="写下您的想法"></textarea>
+              </label>
+              <button type="submit" class="btn-submit">
+                发送消息
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>© 2025 Li Chenxi · All rights reserved.</span>
+        <button class="btn-top" aria-label="返回顶部"></button>
+      </footer>
+    </div>
+
+    <div class="project-modal" aria-hidden="true">
+      <div class="project-modal__backdrop"></div>
+      <div class="project-modal__content" role="dialog" aria-modal="true">
+        <button class="project-modal__close" aria-label="关闭">×</button>
+        <div class="project-modal__body"></div>
+      </div>
+    </div>
+  </body>
+</html>
